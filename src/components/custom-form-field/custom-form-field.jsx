@@ -16,14 +16,24 @@ const CustomFormField = ({name, type='text', placeholder, required=true,  FieldI
                      style={{display: errors[name]?'flex':'none'}}>
                     <FaExclamationCircle size='25px' style={{display: 'block'}}/>
                 </div>
-
-                {(type === "text" && (
-                    <input type={type} name={name} placeholder={placeholder} ref={register({required})} spellCheck={"false"}/>
-                )) || (type === "textarea" && (
-                    <textarea name={name} placeholder={placeholder} ref={register({required})} spellCheck={"false"} style={{height: `${textareaHeightInPx}px`}}/>
-                )) || (type === "email" && (
-                    <input type={"email"} name={name} placeholder={placeholder} ref={register({required})} spellCheck={"false"}/>
-                ))}
+                    <input type={type}
+                           name={name}
+                           placeholder={placeholder}
+                           ref={register({required})}
+                           spellCheck={"false"}
+                           className={type==='text'?'':'hide'}/>
+                    <textarea name={name}
+                              placeholder={placeholder}
+                              ref={register({required})}
+                              spellCheck={"false"}
+                              style={{height: `${textareaHeightInPx}px`}}
+                              className={type==='textarea'?'':'hide'}/>
+                    <input type={"email"}
+                           name={name}
+                           placeholder={placeholder}
+                           ref={register({required})}
+                           spellCheck={"false"}
+                           className={type==='email'?'':'hide'}/>
             </div>
         </div>
     );

@@ -1,7 +1,7 @@
 import React from 'react';
 import CustomForm from "../custom-form/custom-form";
 import './home.scss'
-import {FaUser, FaEnvelope} from 'react-icons/fa'
+import {FaUser, FaEnvelope, FaKey} from 'react-icons/fa'
 const Home = () => {
     const signUpFormFieldData = [
         {
