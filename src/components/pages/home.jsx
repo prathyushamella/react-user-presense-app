@@ -1,17 +1,13 @@
 import React from 'react';
-import CustomForm from "../custom-form/custom-form";
 import './home.scss'
+import SignUpForm from "../sign-up-form/sign-up-form";
 import {FaUser, FaEnvelope, FaKey} from 'react-icons/fa'
 const Home = () => {
     const signUpFormFieldData = [
         {
-            name: 'firstName',
-            placeholder: 'First name',
-            FieldIcon: FaUser
-        },
-        {
-            name: 'lastName',
-            placeholder: 'Last name',
+            name: 'fullName',
+            placeholder: 'Full name',
+            type: "text",
             FieldIcon: FaUser
         },
         {
@@ -45,8 +41,7 @@ const Home = () => {
         <div className={"home"}>
             <div className="home-title">User Presence App</div>
             <div className="form-flexbox">
-                <CustomForm formDetails={signUpFormDetails} customFormFieldData={signUpFormFieldData}/>
-                <CustomForm formDetails={signInFormDetails} customFormFieldData={signInFormFieldData}/>
+                <SignUpForm/>
             </div>
         </div>
     );

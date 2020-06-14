@@ -6,12 +6,13 @@ const CustomForm = ({formDetails, customFormFieldData}) => {
     const reactHookFormObject = useForm();
     const { handleSubmit } = reactHookFormObject;
     const onSubmit = data => console.log(data)
+    console.log(reactHookFormObject.errors)
     const {formClassName, formTitle, formSubtitle, formButton, buttonColor} = formDetails
     return (
         <div className={"form-container"}>
             <div className="form-title">{formTitle}</div>
             <div className="form-subtitle">{formSubtitle}</div>
-            <form className={`custom-form ${formClassName}`} onSubmit={handleSubmit(onSubmit)}>
+            <form className={`custom-form ${formClassName}`} onSubmit={handleSubmit(onSubmit)} noValidate>
                 <div className="form-fields-grid">
                     {customFormFieldData.map(({name, placeholder, FieldIcon,type,  textareaHeightInPx}, index) => (
                         <CustomFormField name={name}

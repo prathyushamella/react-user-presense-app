@@ -3,10 +3,19 @@
   position: relative;
   grid-column: span 4;
 
-  @include md {
-    &.firstName, &.lastName {
-      grid-column: span 2;
-    }
+  //@include md {
+  //  &.firstName, &.lastName {
+  //    grid-column: span 2;
+  //  }
+  //}
+  .error {
+    display: flex;
+    align-items: center;
+    color: rgba($orange-500, 0.7);
+    font-size: 16px;
+    position: absolute;
+    bottom: -25px;
+    left: 12px;
   }
 
 }
@@ -21,24 +30,17 @@
   color: $gray-500;
 }
 
-.input-warning-img-wrapper {
-  display: flex;
-  align-items: center;
-  position: absolute;
-  margin-right: 12px;
-  height: 100%;
-  top: 0;
-  right: 0;
-  color: rgba($orange-500, 0.5);
-}
 
 .input-wrapper {
   width: 100%;
-  color: $gray-800;
+  color: $gray-600;
   background: $gray-300;
   border: 2px $gray-300 solid;
   border-radius: 5px;
   transition: background .2s ease-out;
+
+
+
   &:focus-within {
     background: white;
     border: 2px $gray-300 solid;
