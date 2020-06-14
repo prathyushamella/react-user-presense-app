@@ -2,7 +2,7 @@ import React from 'react';
 import { useForm } from "react-hook-form";
 import './sign-up-form.scss'
 import {FaExclamationTriangle, FaUser, FaEnvelope, FaKey} from "react-icons/fa";
-import {auth, generateUserDocument} from '../../firebase/firebase.utils'
+import {auth} from '../../firebase/firebase.utils'
 
 const SignUpForm = () => {
     const {handleSubmit, errors, register, watch, reset} = useForm();
@@ -101,7 +101,7 @@ const SignUpForm = () => {
                                placeholder={'Confirm password'}
                                ref={register({
                                    required:'This field is required',
-                                   validate: value => value === watch.password || 'The passwords do not match'
+                                   validate: value => value === watch('password') || 'The passwords do not match'
                                })}
                                spellCheck={"false"}/>
                     </div>

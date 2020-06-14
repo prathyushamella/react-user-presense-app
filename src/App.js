@@ -1,19 +1,24 @@
-import React, {useState, useEffect} from 'react';
+import React, {useContext} from 'react';
 import './App.css';
 import {Switch, Route, BrowserRouter as Router } from "react-router-dom";
 import Home from "./pages/home/home";
-import {UserProvider} from "./contexts/UserContext";
+import UserHome from "./pages/user-home/user-home";
+import {UserContext} from "./contexts/UserContext";
 
 function App() {
+    const user = useContext(UserContext)
+    console.log(`from APP render:`, user)
   return (
       <Router>
-          <UserProvider>
               <div className="App">
                   <Switch>
-                      <Route exact path='/' component={Home}/>
+                      <Route exact path={'/'}>
+                          {
+                              user?<UserHome/>:<Home/>
+                          }
+                      </Route>
                   </Switch>
               </div>
-          </UserProvider>
       </Router>
   );
 }

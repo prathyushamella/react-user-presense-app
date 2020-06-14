@@ -10,6 +10,7 @@
   margin-top: 12px;
   color: $blue-800;
   font-weight: 600;
+  border-bottom: 2px $blue-500 solid;
 }
 .form-flexbox {
   height: 100%;
@@ -17,6 +18,9 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  .form-container {
+    padding: 32px;
+  }
 }
 
 .vertical-divider {

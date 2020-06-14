@@ -5,7 +5,10 @@ export const UserContext = createContext();
 
 export const UserProvider = (props) => {
     const [currentUser, setCurrentUser] = useState(null)
-    useEffect(() => auth.onAuthStateChanged(user => setCurrentUser(user)), [])
+    useEffect(() => auth.onAuthStateChanged(user => {
+        console.log(`Auth state changed`, user)
+        setCurrentUser(user)
+    }), [])
 
     return (
         <UserContext.Provider value={currentUser}>
