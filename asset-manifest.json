@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/react-user-presense-app/static/css/main.c50f392a.chunk.css",
+    "main.js": "/react-user-presense-app/static/js/main.70fdf2ed.chunk.js",
+    "main.js.map": "/react-user-presense-app/static/js/main.70fdf2ed.chunk.js.map",
+    "runtime-main.js": "/react-user-presense-app/static/js/runtime-main.34976c3b.js",
+    "runtime-main.js.map": "/react-user-presense-app/static/js/runtime-main.34976c3b.js.map",
+    "static/js/2.c1845e68.chunk.js": "/react-user-presense-app/static/js/2.c1845e68.chunk.js",
+    "static/js/2.c1845e68.chunk.js.map": "/react-user-presense-app/static/js/2.c1845e68.chunk.js.map",
+    "index.html": "/react-user-presense-app/index.html",
+    "precache-manifest.35c79f17d825a235fe6bf1a49945fd8b.js": "/react-user-presense-app/precache-manifest.35c79f17d825a235fe6bf1a49945fd8b.js",
+    "service-worker.js": "/react-user-presense-app/service-worker.js",
+    "static/css/main.c50f392a.chunk.css.map": "/react-user-presense-app/static/css/main.c50f392a.chunk.css.map",
+    "static/js/2.c1845e68.chunk.js.LICENSE.txt": "/react-user-presense-app/static/js/2.c1845e68.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.34976c3b.js",
+    "static/js/2.c1845e68.chunk.js",
+    "static/css/main.c50f392a.chunk.css",
+    "static/js/main.70fdf2ed.chunk.js"
+  ]
+}
