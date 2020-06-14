@@ -2,9 +2,25 @@ import React from 'react';
 import { useForm } from "react-hook-form";
 import './sign-up-form.scss'
 import {FaExclamationTriangle, FaUser, FaEnvelope, FaKey} from "react-icons/fa";
+import {auth, generateUserDocument} from '../../firebase/firebase.utils'
+
 const SignUpForm = () => {
-    const {handleSubmit, errors, register, watch} = useForm();
-    const onSubmit = data => console.log(data)
+    const {handleSubmit, errors, register, watch, reset} = useForm();
+    const onSubmit = async (data) => {
+        const {email, password, fullName} = data
+        console.log(data);
+        try{
+            const {user} = await auth.createUserWithEmailAndPassword(email, password);
+            await user.updateProfile({
+                displayName: fullName
+            })
+            console.log(user)
+        }
+        catch(error){
+            console.log(error)
+        }
+        reset()
+    }
     return (
         <div className={"form-container"}>
             <div className="form-title">I do not have an account</div>

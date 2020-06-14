@@ -1,13 +1,17 @@
-import React from 'react';
+import React, {useContext} from 'react';
 import { useForm } from "react-hook-form";
-import {FaExclamationTriangle, FaUser, FaEnvelope, FaKey} from "react-icons/fa";
+import {FaExclamationTriangle, FaEnvelope, FaKey} from "react-icons/fa";
 import './log-in-form.scss'
 import {auth} from '../../firebase/firebase.utils'
+
+
 const LogInForm = () => {
     const {handleSubmit, errors, register, watch} = useForm();
-    const onSubmit = data => {
+    const onSubmit = async (data) => {
         console.log(data)
-        auth()
+        const {email, password} = data
+        const {user} = await auth.signInWithEmailAndPassword(email, password)
+        console.log(user)
     }
     return (
         <div className={"form-container"}>
