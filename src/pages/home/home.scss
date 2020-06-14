@@ -18,3 +18,8 @@
   align-items: center;
   justify-content: space-between;
 }
+
+.vertical-divider {
+  border-left: 2px $blue-600 solid;
+  height: 600px;
+}
